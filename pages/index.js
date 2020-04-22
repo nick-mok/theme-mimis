@@ -6,7 +6,10 @@ export default function Home() {
   console.log(attributes);
   return (
     <Layout pageTitle={attributes['page-meta']['title']} slides="true">
-    
+    <div className="container">
+      <h3 class="h1">{attributes['title']}</h3>
+      {attributes['intro']}
+    </div>
     </Layout>
   )
 }

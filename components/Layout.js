@@ -25,6 +25,7 @@ export const Layout = (props) => {
             {/* {props.slides && 
                 <Slider heading={props.sliderHeading} text={props.sliderText} button={props.sliderButton} image={props.sliderImage}/>
             } */}
+            {props.children}
         </>
     );
 }
