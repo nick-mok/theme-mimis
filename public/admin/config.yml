@@ -8,7 +8,7 @@ public_folder: "uploads"
 
 collections:
   - name: "pages"
-    label: "Page"
+    label: "Pre-Built Pages"
     files:
     - label: "About Page"
       name: "about"
@@ -21,7 +21,7 @@ collections:
           fields:
             - {label: Meta Title, name: page-title, wiget: string}
             - {label: Meta Description, name: page-description, widget: string}
-            - {label: Disable Page, name: page-disabled, widget: boolean}
+            - {label: Disable Page, name: page-disabled, widget: boolean, require: false}
         - {label: Page Heading, name: title, widget: string, default: "About"}
         - {label: Main Content, name: intro, widget: markdown}
         - label: Team
@@ -33,3 +33,24 @@ collections:
             - {label: Photo, name: photo, widget: image}
   
   
+  - name: "config"
+    label: "Config"
+    files:
+    - label: "Site Configuration"
+      name: site
+      file: "content/config/site.md"
+      fields:
+        - label: General Website Settings
+          name: site-config
+          widget: object
+          collapsed: true
+          fields:
+            - {label: Website Title/Name, name: name, wiget: string}
+            - {label: Default Meta Description, name: description, widget: string}
+            - {label: Hide From Google, name: seo-hide, widget: boolean, require: false}
+    - label: "Slider Configuration"
+      name: "slider"
+      file: "content/config/slider.md"
+      fields:
+      - {label: Default Image, name: default-image, widget: image}
+    
