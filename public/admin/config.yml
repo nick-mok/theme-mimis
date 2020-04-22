@@ -32,21 +32,21 @@ collections:
             - {label: Name, name: name, widget: string}
             - {label: Position, name: position, widget: string}
             - {label: Photo, name: photo, widget: image}
-      - label: "Home Page"
-        name: "home"
-        file: "content/pages/home.md"
-        fields:
-          - label: Page Settings & Meta Information
-            name: page-meta
-            widget: object
-            collapsed: true
-            fields:
-              - {label: Meta Title, name: title, wiget: string}
-              - {label: Meta Description, name: description, widget: string}
-              - {label: Disable Page, name: disabled, widget: boolean, require: false}
-              - {label: Show Slider (Home Version), name: show-slider, widget: boolean, require: false}
-          - {label: Page Heading, name: title, widget: string, default: "About"}
-          - {label: Main Content, name: intro, widget: markdown}
+    - label: "Home Page"
+      name: "home"
+      file: "content/pages/home.md"
+      fields:
+        - label: Page Settings & Meta Information
+          name: page-meta
+          widget: object
+          collapsed: true
+          fields:
+            - {label: Meta Title, name: title, wiget: string}
+            - {label: Meta Description, name: description, widget: string}
+            - {label: Disable Page, name: disabled, widget: boolean, require: false}
+            - {label: Show Slider (Home Version), name: show-slider, widget: boolean, require: false}
+        - {label: Page Heading, name: title, widget: string, default: "About"}
+        - {label: Main Content, name: intro, widget: markdown}
 
   - name: "config"
     label: "Config"
