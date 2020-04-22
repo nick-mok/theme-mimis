@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "public/uploads"
+public_folder: "uploads"
+
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Slider Images", 
+        name: "slider-images", 
+        widget: "list",
+        fields: 
+          - {label: "Slide Image", name: "slide-image", widget: "image"},
+          - {label: "Slide Heading", name: "slide-heading", widget: "text"},
+          - {label: "Slide Paragraph", name: "slide-text", widget: "text"},
+          - {label: "Slide Button", name: "slide-button", widget: "text"}
+    

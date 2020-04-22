@@ -1,16 +1,17 @@
 import Link from 'next/link';
 
-export const Slider = () => (
+export const Slider = ({heading, text, button, image}) => (
     <div className="image-slider">
         <div className="bg-wash"></div>
         <div className="container">
             <div className="row">
                 <div className="col-md-10">
-                    <div className="h1 text-md-left text-white text-center">Awarded best restaurant in Dallas</div>
+                    <div className="h1 text-md-left text-white text-center">Awarded best restaurant in Texas</div>
+                    { button &&
                     <Link href="/">
                         <a className="btn btn-info">Read Our Story</a>
                     </Link>
-
+                    }
                 </div>
             </div>
         </div>
