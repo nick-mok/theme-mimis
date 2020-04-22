@@ -19,9 +19,10 @@ collections:
           widget: object
           collapsed: true
           fields:
-            - {label: Meta Title, name: page-title, wiget: string}
-            - {label: Meta Description, name: page-description, widget: string}
-            - {label: Disable Page, name: page-disabled, widget: boolean, require: false}
+            - {label: Meta Title, name: title, wiget: string}
+            - {label: Meta Description, name: description, widget: string}
+            - {label: Disable Page, name: disabled, widget: boolean, require: false}
+            - {label: Show Slider (Page Banner Version), name: show-slider, widget: boolean, require: false}
         - {label: Page Heading, name: title, widget: string, default: "About"}
         - {label: Main Content, name: intro, widget: markdown}
         - label: Team
@@ -31,8 +32,22 @@ collections:
             - {label: Name, name: name, widget: string}
             - {label: Position, name: position, widget: string}
             - {label: Photo, name: photo, widget: image}
-  
-  
+      - label: "Home Page"
+        name: "home"
+        file: "content/pages/home.md"
+        fields:
+          - label: Page Settings & Meta Information
+            name: page-meta
+            widget: object
+            collapsed: true
+            fields:
+              - {label: Meta Title, name: title, wiget: string}
+              - {label: Meta Description, name: description, widget: string}
+              - {label: Disable Page, name: disabled, widget: boolean, require: false}
+              - {label: Show Slider (Home Version), name: show-slider, widget: boolean, require: false}
+          - {label: Page Heading, name: title, widget: string, default: "About"}
+          - {label: Main Content, name: intro, widget: markdown}
+
   - name: "config"
     label: "Config"
     files:
@@ -41,16 +56,16 @@ collections:
       file: "content/config/site.md"
       fields:
         - label: General Website Settings
-          name: site-config
+          name: siteconfig
           widget: object
           collapsed: true
           fields:
             - {label: Website Title/Name, name: name, wiget: string}
             - {label: Default Meta Description, name: description, widget: string}
-            - {label: Hide From Google, name: seo-hide, widget: boolean, require: false}
+            - {label: Hide From Google, name: seoHide, widget: boolean, require: false}
     - label: "Slider Configuration"
       name: "slider"
       file: "content/config/slider.md"
       fields:
-      - {label: Default Image, name: default-image, widget: image}
+      - {label: Default Image, name: defaultImage, widget: image}
     
