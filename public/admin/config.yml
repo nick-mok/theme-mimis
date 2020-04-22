@@ -21,8 +21,8 @@ collections:
           fields:
             - {label: Meta Title, name: title, wiget: string}
             - {label: Meta Description, name: description, widget: string}
-            - {label: Disable Page, name: disabled, widget: boolean, require: false}
-            - {label: Show Slider (Page Banner Version), name: show-slider, widget: boolean, require: false}
+            - {label: Disable Page, name: disabled, widget: boolean, required: false}
+            - {label: Show Slider (Page Banner Version), name: show-slider, widget: boolean, required: false}
         - {label: Page Heading, name: title, widget: string, default: "About"}
         - {label: Main Content, name: intro, widget: markdown}
         - label: Team
@@ -43,8 +43,8 @@ collections:
           fields:
             - {label: Meta Title, name: title, wiget: string}
             - {label: Meta Description, name: description, widget: string}
-            - {label: Disable Page, name: disabled, widget: boolean, require: false}
-            - {label: Show Slider (Home Version), name: show-slider, widget: boolean, require: false}
+            - {label: Disable Page, name: disabled, widget: boolean, required: false}
+            - {label: Show Slider (Home Version), name: show-slider, widget: boolean, required: false}
         - {label: Page Heading, name: title, widget: string, default: "About"}
         - {label: Main Content, name: intro, widget: markdown}
 
@@ -62,7 +62,7 @@ collections:
           fields:
             - {label: Website Title/Name, name: name, wiget: string}
             - {label: Default Meta Description, name: description, widget: string}
-            - {label: Hide From Google, name: seoHide, widget: boolean, require: false}
+            - {label: Hide From Google, name: seoHide, widget: boolean, required: false}
     - label: "Slider Configuration"
       name: "slider"
       file: "content/config/slider.md"
