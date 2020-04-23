@@ -62,7 +62,7 @@ collections:
           fields:
             - {label: Website Title/Name, name: name, wiget: string}
             - {label: Default Meta Description, name: description, widget: string}
-            - {label: Hide From Google, name: seoHide, widget: boolean, required: false}
+            - {label: Hide From Google, name: seo-hide, widget: boolean, required: false}
     - label: "Slider Configuration"
       name: "slider"
       file: "content/config/slider.md"
