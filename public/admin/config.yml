@@ -52,7 +52,7 @@ collections:
           collapsed: true
           fields:
             - {label: Show Banner (Home Version), name: show-slider, widget: boolean, require: false}
-            - {label: image, name: image, widget: image, default: "/uploads/default-header.jpg"}
+            - {label: image, name: image, widget: image, default: "/uploads/default-header.jpg", required: false}
             - {label: Banner Title, name: slider-heading, widget: text, required: false}
             - {label: Banner Subtitle, name: slider-lead, widget: text, required: false}
             - {label: Banner Button Text, name: slider-button-text, widget: text, required: false}
