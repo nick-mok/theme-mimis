@@ -29,6 +29,7 @@ export const Slider = (props) => {
                             <a className="btn btn-info">{props['slider-button-text']}</a>
                         </Link>
                         }
+                        {props['image']}
                     </div>
                 </div>
             </div>
@@ -36,7 +37,7 @@ export const Slider = (props) => {
         <style jsx>{`
             .image-slider {
                 position: relative;
-                background: url('uploads/header.jpg');
+                background: url('${props['image']}');
                 background-position: center center;
                 background-size: cover;
                 color: white !important;
