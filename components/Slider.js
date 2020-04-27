@@ -1,8 +1,9 @@
 import Link from 'next/link';
 
 export const ShowOptionalSlider = (Component) => {
-    return ({show, ...props}) => {
-        if(show) {
+    return ({...props}) => {
+        
+        if(props['show-slider']) {
             return <Component {...props}/>
         }
         return null;
@@ -10,9 +11,6 @@ export const ShowOptionalSlider = (Component) => {
 }
 
 export const Slider = (props) => {
-
-    const {heading, text, button, image} = props;
-
     return(
     <>
         <div className="image-slider">
@@ -20,10 +18,15 @@ export const Slider = (props) => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-10">
-                        <div className="h1 text-md-left text-white text-center">Awarded best restaurant in Texas</div>
-                        { button &&
-                        <Link href="/">
-                            <a className="btn btn-info">Read Our Story</a>
+                        { props['slider-heading'] &&
+                        <div className="h1 text-md-left text-white text-center">{props['slider-heading']}</div>
+                        }
+                        {props['slider-lead'] &&
+                        <div className="h3 mb-4 text-md-left text-white text-center">{props['slider-lead']}</div>
+                        }
+                        { props['slider-button-text'] &&
+                        <Link href={props['slider-button-link']}>
+                            <a className="btn btn-info">{props['slider-button-text']}</a>
                         </Link>
                         }
                     </div>
@@ -50,7 +53,7 @@ export const Slider = (props) => {
                 top: 0;
                 right: 0;
                 bottom: 0;
-                background: linear-gradient(45deg, #000544b8, transparent);
+                background: linear-gradient(45deg,#000544,transparent)
             }
         `}</style>
     </>

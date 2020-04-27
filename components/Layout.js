@@ -13,15 +13,14 @@ const defaultSiteTitle = attributes['site-config']['name'];
 const ShowSlider = ShowOptionalSlider(Slider);
 
 export const Layout = (props) => {
-    
-    const {pageTitle = defaultSiteConfig.name} = props;
+    const { pageTitle = defaultSiteConfig.name, pageSlider = {} } = props;
     return(
         <>
             <Head>
                 <title>{pageTitle} - {defaultSiteConfig.name}</title>
             </Head>
             <Header/>
-            <ShowSlider show={false} />
+            <ShowSlider {...pageSlider} />
             {/* {props.slides && 
                 <Slider heading={props.sliderHeading} text={props.sliderText} button={props.sliderButton} image={props.sliderImage}/>
             } */}

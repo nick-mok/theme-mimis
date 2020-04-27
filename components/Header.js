@@ -13,9 +13,7 @@ const navigation = [
 ];
 
 export const Header = (props) => {
-    {
-        
-    }
+    
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
             <div className="container">
