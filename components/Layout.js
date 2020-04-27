@@ -2,8 +2,8 @@ import Header from './Header';
 import Main from './Main';
 import Head from 'next/head';
 import Slider, {ShowOptionalSlider} from './Slider';
-import {attributes, react } from '../content/config/site.md';
-console.log(attributes);
+import {attributes} from '../content/config/site.md';
+
 const defaultSiteConfig = {
     name: attributes['site-config']['name'],
     description: attributes['site-config']['description']
