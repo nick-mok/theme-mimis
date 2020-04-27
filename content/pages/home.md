@@ -6,7 +6,7 @@ page-meta:
 title: Welcome
 intro: 'This is the main homepage content, where will you display me?'
 page-slider:
-  image: /uploads/header.jpg
+  image: ''
   show-slider: true
   slider-button-link: 'https://www.google.com'
   slider-button-text: Learn more
