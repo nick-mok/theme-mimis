@@ -44,9 +44,19 @@ collections:
             - {label: Meta Title, name: title, wiget: string}
             - {label: Meta Description, name: description, widget: string}
             - {label: Disable Page, name: disabled, widget: boolean, required: false}
-            - {label: Show Slider (Home Version), name: show-slider, widget: boolean, required: false}
         - {label: Page Heading, name: title, widget: string, default: "About"}
         - {label: Main Content, name: intro, widget: markdown}
+        - label: Page Slider
+          name: page-slider
+          widget: object
+          collapsed: true
+          fields:
+            - {label: Show Banner (Home Version), name: show-slider, widget: boolean, require: false}
+            - {label: image, name: image, widget: image, default: "/uploads/default-header.jpg"}
+            - {label: Banner Title, name: slider-heading, widget: text, required: false}
+            - {label: Banner Subtitle, name: slider-lead, widget: text, required: false}
+            - {label: Banner Button Text, name: slider-button-text, widget: text, required: false}
+            - {label: Banner Button Link, name: slider-button-link, widget: text, required: false}
 
   - name: "config"
     label: "Config"

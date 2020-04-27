@@ -9,7 +9,6 @@ export default function Home(props) {
     <div className="container">
       <h3 className="h1">{attributes['title']}</h3>
       {attributes['intro']}
-      <HomeContent />
     </div>
     </Layout>
   )
@@ -17,7 +16,6 @@ export default function Home(props) {
 
 export const getStaticProps = (params) => {
   const {attributes, html} = require('../content/pages/home.md');
-  console.log(html);
 
   return {
     props: {
